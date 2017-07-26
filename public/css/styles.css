@@ -38,3 +38,7 @@ p{
 #user p{
   margin-top: -.5em;
 }
+
+#availability {
+  color: red;
+}
