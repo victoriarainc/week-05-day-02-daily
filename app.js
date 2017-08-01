@@ -1,5 +1,6 @@
 const express = require('express');
 const mustacheExpress = require('mustache-express');
+//EDITED: The user data was moved into its own model file.
 // const data = require('./data.js')
 const robotRoutes = require('./routes/robots');
 
@@ -13,6 +14,7 @@ app.use (express.static('public'));
 
 app.use('/', robotRoutes);
 
+//EDITED: The routes were moved into their own routes file.
 // app.get('/', function(req, res) {
 //   res.render('home', {users:data.users})
 // });

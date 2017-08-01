@@ -1,13 +1,12 @@
 const express = require('express');
-// const mustacheExpress = require('mustache-express');
 const robot = require('../models/robot');
 
+//EDITED: Added a router to group the two routes
 var routes = express.Router();
-// routes.engine ('mustache', mustacheExpress());
-// routes.set ('views', '../views');
-// routes.set ('view engine', 'mustache');
+
 
 routes.get('/', function(req, res) {
+  //EDITED: Template now uses method from the model file.
   res.render('home', {users:robot.getAll()})
 });
 
@@ -15,8 +14,11 @@ routes.get('/users/:robotName', function (req, res) {
   // We need to find items in the array that matches
   // what has been 'caught' in the url
   let username = req.params.robotName; // === 'hjuaz0';
+
+  //EDITED: Template now uses method from the model file.
   let robot_item = robot.getOne(username);
 
+  //EDITED: This logic got moved into the model file.
   // let robot_item = null;
   //
   // // We are trying to find and object who's username
@@ -38,4 +40,5 @@ routes.get('/users/:robotName', function (req, res) {
   res.render('goof', robot_item);
 });
 
+//EDITED: Makes the route object available for reference.
 module.exports = routes;

@@ -1,3 +1,4 @@
+//EDITED: Moved array into model file to directly reference in the following logic.
 const database = [
 {"id":1,"username":"hjuza0","name":"Hamlen Juza","avatar":"https://robohash.org/blanditiisexercitationemquaerat.png?size=150x150&set=set1","email":"hjuza0@blogger.com","university":"Pomor State University","job":"Engineer IV","company":"Stark, Feil and Bode","skills":["DMVPN","HDX","Rhino 3D"],"phone":"7-(397)813-7803","address":{"street_num":"78226","street_name":"Ryan","city":"Kamennogorsk","state_or_province":null,"postal_code":"188950","country":"Russia"}},
 {"id":2,"username":"dodda1","name":"Dee Odda","avatar":"https://robohash.org/iurequiaet.bmp?size=150x150&set=set1","email":"dodda1@nifty.com","university":"Chongqing Education College","job":null,"company":null,"skills":["Petrochemical","Omnet++","Spanish"],"phone":"86-(826)796-6920","address":{"street_num":"3446","street_name":"Onsgard","city":"Zhujiang","state_or_province":null,"postal_code":null,"country":"China"}},
@@ -51,10 +52,11 @@ const database = [
 {"id":50,"username":"ogilyatt1d","name":"Oriana Gilyatt","avatar":"https://robohash.org/voluptatemeaautem.png?size=150x150&set=set1","email":"ogilyatt1d@domainmarket.com","university":"Cheyney University of Pennsylvania","job":"Editor","company":"Turner-Barton","skills":["Microsoft Office","Tcl-Tk","eZ Publish"],"phone":"1-(609)919-5377","address":{"street_num":"891","street_name":"Hollow Ridge","city":"Trenton","state_or_province":"NJ","postal_code":"08650","country":"United States"}}
 ];
 
+//EDITED: Created logic that can be called on quickly and easily.
 function getAll () {
   return database
 };
-
+//EDITED: Created logic that can be called on quickly and easily.
 function getOne (username) {
   let robot_item = null;
 
@@ -71,5 +73,6 @@ function getOne (username) {
   return robot_item
 };
 
+//EDITED: Allows these functions to be required
 module.exports.getAll = getAll;
 module.exports.getOne = getOne;
